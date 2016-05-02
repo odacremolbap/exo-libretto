@@ -64,7 +64,7 @@ func main() {
 	if err = vm.Start(); err != nil {
 		fmt.Printf("Error starting machine: %s", err)
 	}
-	fmt.Println("[Machine should be starting]")
+	fmt.Println("[Machine should be starting/stopped]")
 	printInfo(vm)
 
 	time.Sleep(20 * time.Second)
@@ -74,7 +74,7 @@ func main() {
 	fmt.Printf("Destroy ...\n")
 	vm.Destroy()
 
-	fmt.Println("[Machine should be stopping]")
+	fmt.Println("[Machine should be stopping/running]")
 	printInfo(vm)
 
 }
